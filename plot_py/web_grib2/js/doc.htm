@@ -1,0 +1,1686 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.7 [en] (X11; U; Linux 2.2.16-3 i686) [Netscape]">
+  <title>SREF DocumentSREF Document</title>
+</head>
+<body bgcolor="#ffffff">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b><font color="#0000ff"><font size="+2">NCEP Short Range Ensemble
+Forecast(SRFF)
+Aviation Project</font></font></b>&nbsp;
+<b><font color="#0000ff"><font size="+2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+09/16/2004</font></font></b>
+<center></center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<big>Binbin ZHou<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+SAIC@NOAA/NWS/NCEP/EMC </big><br>
+<br>
+</p>
+<p><a name="1"></a><b><font color="#3333ff"><font size="+1">1.
+Motivation,
+Background and Goal</font></font></b>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+NCEP's
+Short Range Ensemble Forecast(SREF) provides probabilistic forecast
+information
+on the</font>
+<br>
+<font size="+1">meso-scale, and has undergone development by EMC/NCEP
+since 1996 (Du, et al, 2003). The SREF&nbsp; system</font>
+<br>
+<font size="+1">has been run operationally at NCEP for two years. The
+SREF Aviation project, a subset of the NCEP SREF</font>
+<br>
+<font size="+1">system, seeks to further improve the utility of SREF
+products by applying ensemble techniques to aviation</font>
+<br>
+<font size="+1">weather forecasts.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; Basically, an ensemble
+forecast
+is composed of a set of models or "ensemble&nbsp; members" run at the
+same</font>
+<br>
+<font size="+1">time. The members can be made from the same model using
+different initial/ boundaryconditions or physics</font>
+<br>
+<font size="+1">schemes, from a multi-model system, or from some
+combination
+of the above. The output from the various</font>
+<br>
+<font size="+1">ensemble members is used to perform
+statisticalcomputations
+to create probabilistic forecast information</font>
+<br>
+<font size="+1">such as an ensemble mean, spread (standard
+deviation),&nbsp;
+probability of occurence, etc.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The aviation weather
+forecast
+requires additional forecast products than are typically used for
+standard</font>
+<br>
+<font size="+1">weather forecasting. Aviation forecasting focuses on
+short time scales. Substantial efforts have been made</font>
+<br>
+<font size="+1">to improve the aviation weather forecast, such as
+utilizing
+more sophisticated meteorological models and</font>
+<br>
+<font size="+1">employing&nbsp; more complex algorithms to compute
+aviation
+weather variables such as icing and turbulence.</font>
+<br>
+<font size="+1">Traditionally,&nbsp; deterministic weather forecast
+approaches
+were used.&nbsp; It has been recognized that the</font>
+<br>
+<font size="+1">computer-generated weather system does not always
+result
+in a perfect forecast&nbsp; because of the chaotic</font>
+<br>
+<font size="+1">characteristics of the atmosphere.&nbsp; Thus,
+probabilistic
+or ensemble-based forecast from the SREF system</font>
+<br>
+<font size="+1">can provideadditionalinformation in terms of forecast
+confidence and uncertainty, and can be useful to</font>
+<br>
+<font size="+1">aviation weather forecasters.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; Please keep in mind that
+current
+SREF-aviation products are still under development and very
+experimental.</font>
+<br>
+<font size="+1">As the SREF system is updated and SREF ensemble outputs
+are changed,&nbsp; SREF aviation products will be</font>
+<br>
+<font size="+1">improved or make use of new algorithms as well.&nbsp;
+Also, SREF aviation products will be upgraded based on user</font>
+<br>
+<font size="+1">feedback and requirements. We are trying to provide a
+useful, efficient, and user-friendly tool to aviation</font>
+<br>
+<font size="+1">weather forecasters.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; Also please keep in mind that the
+primary
+goal of SREF system is not only improve the forecast"preciseness",</font>
+<br>
+<font size="+1">but&nbsp; more important, to quantify the uncertainties
+in the initial conditions and the models
+or confidence interms <br>
+of a set of statistics based on the</font>
+<font size="+1">ensemble&nbsp; members. It&nbsp;</font><font size="+1">
+gives out information on what the
+most likely outcome <br>
+might be.</font>
+</p>
+<p><font size="+1">&nbsp;The SREF documentation is located <a
+ href="http://wwwt.emc.ncep.noaa.gov/mmb/SREF-Docs/">here.</a>&nbsp;&nbsp;
+Additional ensemble training information can be found <a
+ href="http://www.hpc.ncep.noaa.gov/ensembletraining/">here.</a></font>
+</p>
+<p><a name="2"></a><font color="#3333ff"><font size="+1">2. Ensemble
+models
+and members</font></font>
+</p>
+<p><font size="+1">&nbsp; SREF runs at NCEP twice a day; first at 09Z,
+then
+at 21Z.&nbsp; The forecasts run out to 63 hours,and data is output</font>
+<br>
+<font size="+1">at 3-hour intervals.</font>
+</p>
+<p><font size="+1">The current SREF ensemble is made up of 15 members,
+based
+on 32km Eta model and 40km RSM models.<br>
+</font><font size="+1"></font></p>
+<font size="+1">RSM is adapted from the global RSM to a mesoscale
+domain.&nbsp; </font><font size="+1">The 15 ensemble models are
+generated from <br>
+combinations of breeding pair (one positive and one negative random
+perturbations)&nbsp; and different convection <br>
+schemes:<br>
+<br>
+</font>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; height: 180px; width: 345px;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">&nbsp;&nbsp;
+Model<br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold;">&nbsp;&nbsp;
+Concevtion Schemes<br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold;">&nbsp;
+IC&nbsp; breeding<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; ETA<br>
+      </td>
+      <td style="vertical-align: top;">&nbsp;Betts-Miller-Janic (BMJ)<br>
+      </td>
+      <td style="vertical-align: top;">&nbsp; Control + 1 pair <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; ETA<br>
+      </td>
+      <td style="vertical-align: top;">Kain-Fritsh(KF) <br>
+      </td>
+      <td style="vertical-align: top;">&nbsp;Control + 1 pair<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; ETA<br>
+      </td>
+      <td style="vertical-align: top;">BMJ-SAT (Saturated moisture
+profile)</td>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 pair<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; ETA<br>
+      </td>
+      <td style="vertical-align: top;">KF-DET(Full cloud detrainment)<br>
+      </td>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 pair<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; RSM<br>
+      </td>
+      <td style="vertical-align: top;">Simple Arakawa Shubert (SAS)<br>
+      </td>
+      <td style="vertical-align: top;">&nbsp; Control + 1 pair<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; RSM<br>
+      </td>
+      <td style="vertical-align: top;">Relaxed Arakawa Shubert (RAS)<br>
+      </td>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+pair<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<font size="+1"></font><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;</font><font
+ size="+1"></font>
+<p><font size="+1">While the current SREF system has 15 members, not
+every
+aviation product is made from all 15 SREF</font>
+<br>
+<font size="+1">members.&nbsp; The Eta and RSM have different
+post-processed
+data output, and don'talways contain the</font>
+<br>
+<font size="+1">variables needed for&nbsp; a particular product.&nbsp;
+The table below lists the variousaviation products and which</font>
+<br>
+<font size="+1">of the models/physics schemes were used to derive them:</font>
+<br>
+&nbsp;
+<table border="1" cols="4" nosave=""
+ style="width: 678px; height: 416px;">
+  <caption>&nbsp;</caption> <tbody>
+    <tr nosave="">
+      <td width="30%" nosave="" style="font-weight: bold;">
+      <center><font size="+1">Variable</font></center>
+      </td>
+      <td style="font-weight: bold;">
+      <center><font size="+1">&nbsp;Model Schemes</font></center>
+      </td>
+      <td style="font-weight: bold;">
+      <center><font size="+1">&nbsp;Members</font></center>
+      </td>
+      <td width="30%" nosave="" style="font-weight: bold;">
+      <center><font size="+1">&nbsp;Forecast Type</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Icing</font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">probability</font></center>
+      </td>
+    </tr>
+    <tr nosave="">
+      <td height="3%" nosave="">
+      <center><font size="+1">Turbulence</font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">probability</font></center>
+      </td>
+    </tr>
+    <tr nosave="">
+      <td height="10%" nosave="">
+      <center><font size="+1">Jet Stream</font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">probability</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Low level&nbsp; wind shear</font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">probability, mean&amp;spread</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Convective storm speed</font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">mean&amp;spread</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">&nbsp;Convection&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center><font size="+1">mean&amp;spread</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">10 m wind<br>
+      </font></center>
+      </td>
+      <td>
+      <center><font size="+1">All 3&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">15</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;probability, mean&amp;spread <br>
+      </font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Precipitation type<br>
+      </font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Probability</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Tropopause <br>
+      </font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;mean&amp;spread</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Frozen height</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center>mean&amp;spread<br>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Cloud&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center><font size="+1">probability, mean&amp;spread</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">LIFR,IFR,MVFR,VFR&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td>
+      <center>probability<br>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Ceiling</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Eta</font></center>
+      </td>
+      <td>
+      <center><font size="+1">10</font></center>
+      </td>
+      <td><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+mean&amp;spread</font></td>
+    </tr>
+    <tr nosave="">
+      <td><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Visibility</font></td>
+      <td nosave=""><font size="+1">&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Eta</font></td>
+      <td><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+10</font></td>
+      <td align="center" valign="CENTER" nosave=""><font size="+1">mean&amp;spread</font></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><a name="3"></a><font size="+1">3. Multiple initial conditions and
+boundary
+conditions</font>
+</p>
+<p><font size="+1">The current SREF system uses a breeding method to
+create
+different ensemble members. That is, using a</font>
+<br>
+<font size="+1">random perturbation field, we add or subtract from the
+original initial condition to create a pair of new perturbed</font>
+<br>
+<font size="+1">initial conditions.</font>
+</p>
+<p><font size="+1">The boundary conditions come from NCEP's global
+ensemble
+output.</font>
+</p>
+<p><a name="4"></a><font color="#3333ff"><font size="+1">4. Model
+timelines,
+Data display, Output format and Product update times</font></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The SREF-aviation
+production
+is divided into 3 parts:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) Computation: Copy
+SREF
+files and run models, 30 minutes total</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+09Z cycle:&nbsp;&nbsp;&nbsp; 9:30-10:00Z</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+21Z cycle:&nbsp; 21:30-22:00Z</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) Image
+creation:
+Produce image (GIF) files from model output, about 30minutes</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)
+Distribution:&nbsp;
+Send GIF files to the NCEP server, 30 minutes.&nbsp; This also includes</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+updating the html files' time stamp on the server</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; The total time used to produce
+the
+new forecast is one and half hours, finishing at about 11:00Z for&nbsp;
+the 09Z&nbsp; run</font>
+<br>
+<font size="+1">and 23:00Z for the 21Z run.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; The images are produced by
+GRADS
+directly from output files in GRIB format. Each weather parameter&nbsp;
+has</font>
+<br>
+<font size="+1">22 images so that the results can be animated. Thus,
+your browser needs to download all 22 of the GIF&nbsp; files before</font>
+<br>
+<font size="+1">a new forecast product can be displayed.&nbsp; Those
+who have low-speed Internet connections or&nbsp; less powerful</font>
+<br>
+<font size="+1">computers will notice some delay in viewing SREF
+products.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; The SREF-aviation computation data are
+stored
+in GRIB-extension format. The extension is NCEP's&nbsp; special</font>
+<br>
+<font size="+1">addition to regular GRIB format for storing unique
+ensemble
+data. Because of the limits to NCEP's on-line system</font>
+<br>
+<font size="+1">storage, SREF-aviation computation results are kept
+only
+3 days. If users want these data, we can send them files</font>
+<br>
+<font size="+1">in GRIB-extension format only. A list of the weather
+parameters available in the&nbsp; SREF-aviation GRIB-extension</font>
+<br>
+<font size="+1">file can be found<a
+ href="http://wwwt.emc.ncep.noaa.gov/mmb/SREF/FCST/AVN/web_site/sref_avia_var_list.doc">
+here</a>.&nbsp;&nbsp; Background information on the <a
+ href="http://wwwt.emc.ncep.noaa.gov/gmb/ens/info/ens_grib.html#gribex">NCEP
+GRIB-extension</a> format is also available on our</font>
+<br>
+<font size="+1">website.</font>
+</p>
+<p><font size="+1">SREF BUFR files (for specific locations) are not
+available
+at present.</font>
+<br>
+&nbsp;
+</p>
+<p><a name="5"></a><font color="#3333ff"><font size="+1">5. Ensemble
+variables</font></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are
+many
+variables used in the ensemble forecast to create the probabilistic
+forecasts
+of mean, spread,</font>
+<br>
+<font size="+1">"spaghetti", and probability of occurrence.&nbsp; In
+SREF-aviation, only mean, spread and probability are used.&nbsp; The</font>
+<br>
+<font size="+1">"spaghetti plots" of individual ensemble members are
+not shown.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Definition-ensemble <font
+ color="#3333ff"><i>mean</i>:</font>
+The average value of all members.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Definition-<i><font color="#3333ff">spread</font></i>:
+The standard deviation with respect to ensemble mean. The spread of a
+variable
+indicates the</font>
+<br>
+<font size="+1">forecast diversity of the ensemble mean among all the
+members.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Definition-<i><font color="#3333ff">probability</font></i>:&nbsp;
+For an event, out of all members, in how many members does the event
+occur.&nbsp;
+Probability</font>
+<br>
+<font size="+1">of aevent (variable) is expressedas a percentage.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; For example, a probability of
+icing
+at FL180 equals to 60 % means that 9 of the 15 members, or 60% of the
+runs</font>
+<br>
+<font size="+1">(9/15 x 100 = 60 %), have icing at that level.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; In the images, the mean is
+denoted
+by contours, spread by colored shading, and probability can be denoted
+either</font>
+<br>
+<font size="+1">by contours or shading.</font>
+</p>
+<p><a name="6"></a><font color="#3333ff"><font size="+1">6. Definition
+and
+method of computation for each variable</font></font>
+</p>
+<p><i><font color="#3333ff"><font size="+1">(1) Icing (In-Flight)
+probability</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; In the real world, icing is a
+phenomenon
+in which ice particles or water droplets freeze on an aircraft,
+particularly</font>
+<br>
+<font size="+1">the wings. The icing forecast predicts where the kind
+of environment favorable for icing events is likely to develop.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; The icing environment depends
+mostly
+on temperature, humidity and cloud water content at certain levels.
+There</font>
+<br>
+<font size="+1">are many algorithms to predict such an environment,
+ranging
+from the simple to the very complex. Since the current</font>
+<br>
+<font size="+1">RSM lacks cloud water content,we use a T-RH
+(temperature-relative
+humidity) algorithm to predict icing instead</font>
+<br>
+<font size="+1">of a method&nbsp; using cloud water. Thus, current
+icing
+products can't distinguish between frozen ice and supercooled</font>
+<br>
+<font size="+1">large droplets (SLD).&nbsp; The new version of RSM,
+which
+has cloud water content in its post-processed output, will</font>
+<br>
+<font size="+1">be soon be implemented at NCEP. Then we can use more
+sophisticated icing algorithms.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; The range of T and RH for icing event
+is:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>-10 C &lt; T &lt; 0 C&nbsp;&nbsp; and&nbsp;&nbsp; RH &gt; 70%</i></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Icing is computed at 8 flight levels,
+from
+low to high:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL000:&nbsp;&nbsp;&nbsp;
+surface</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL030:&nbsp;&nbsp;&nbsp;
+3000 ft (900mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL060:&nbsp;&nbsp;&nbsp;
+6000 ft (800mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL090:&nbsp;&nbsp;&nbsp;
+9000 ft (725mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FL120:&nbsp; 12000
+ft (650mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FL150:&nbsp; 15000
+ft (575mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FL180:&nbsp; 18000
+ft (500mb)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FL240:&nbsp; 24000
+ft (400mb)</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At certain
+levels
+and model gridpoints, if temperature and relative humidity both meet
+the
+icing criteria above,</font>
+<br>
+<font size="+1">then the icing condition is "yes".&nbsp; If M ensemble
+members out of all N members predict icing conditions at the same</font>
+<br>
+<font size="+1">level and gridpoint, then the icing probability is</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>M/N x100 %</i></font>
+</p>
+<p><a name="7"></a><i><font color="#3333ff"><font size="+1">(2) Clear
+Air
+Turbulence (CAT) Probability</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; CAT is defined as a
+turbulence
+event occuring at high, cloudless altitudes.&nbsp; Like icing, there
+are
+morethan a dozen</font>
+<br>
+<font size="+1">methods to predict the CAT intensities. The SREF
+aviation
+turbulence product uses the Ellrod(Gary P. Ellrod, 1992)</font>
+<br>
+<font size="+1">algorithm.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; The Ellrod algorithm
+classifies
+CAT intensity into 3 categories: LIGHT to MODERATE, MODERATE, and</font>
+<br>
+<font size="+1">MODERATE to SEVERE, and uses a turbulence intensity
+index
+to determine which categorythe event belongs to.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Ellrod turbulence
+intensity
+index is defined as a function of stretching deformation (DST),
+shearing
+deforma-</font>
+<br>
+<font size="+1">tion (DSH), vertical wind shear (VWS) and convergence
+(CVG).&nbsp; These four factors implicitly reflect the effects of</font>
+<br>
+<font size="+1">wind gradients in both the horizontal and vertical
+directions,
+and the temperature gradient as well.&nbsp; In detail,</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>Index = VWS
+*
+[ DEF + CVG ]</i></font>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VWS =
+sqrt(dU*dU
++ dV*dV) / dz,&nbsp;&nbsp; where U , V are wind u,v components (in
+m/s),
+respectively</font></i>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEF =
+sqrt(DST*DST
++ DSH*DSH)</font></i>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DST = dU/dx
+-
+dV/dy</font></i>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DSH = dV/dx
++
+dU/dy</font></i>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CVG = -
+(dU/dx
++ dV/dy)</font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As pointed out by
+Ellrod,
+defining the 3-category index values for different CATintensities
+depends
+on resolution.</font>
+<br>
+<font size="+1">For different horizontal resolutions, Ellrodsuggested
+using different index values.&nbsp; For the SREF-aviation CAT,&nbsp; all</font>
+<br>
+<font size="+1">computations use the following index values:</font>
+<table border="1" cols="4" nosave="" style="width: 645px; height: 78px;">
+  <caption>&nbsp;</caption> <tbody>
+    <tr>
+      <td>
+      <center><font size="+1">&nbsp;Turbulence intensity</font></center>
+      </td>
+      <td>
+      <center><font size="+1">LIGHT-MODERATE</font></center>
+      </td>
+      <td>
+      <center><font size="+1">MODERATE</font></center>
+      </td>
+      <td>
+      <center><font size="+1">MODERATE-SEVERE</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Index (x0.00001)</font></center>
+      </td>
+      <td>
+      <center><font size="+1">4</font></center>
+      </td>
+      <td>
+      <center><font size="+1">8</font></center>
+      </td>
+      <td>
+      <center><font size="+1">12</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Please note
+that
+the turbulence intensity index is computed between 2 levels, i.e.
+within
+a layer instead of&nbsp; at a</font>
+<br>
+<font size="+1">single level. In SREF-aviation products, the turbulence
+intensity is evaluated within 8 continuous layers, from low</font>
+<br>
+<font size="+1">to high:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL210-FL180&nbsp;
+or&nbsp;&nbsp; 450-500mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL240-FL210&nbsp;
+or&nbsp;&nbsp; 400-450mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL270-FL240&nbsp;
+or&nbsp;&nbsp; 350-400mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL300-FL270&nbsp;
+or&nbsp;&nbsp; 300-350mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL330-FL300&nbsp;
+or&nbsp;&nbsp; 275-300mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL360-FL330&nbsp;
+or&nbsp;&nbsp; 225-275mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL390-FL360&nbsp;
+or&nbsp;&nbsp; 200-225mb</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FL420-FL390&nbsp;
+or&nbsp;&nbsp; 175-200mb</font>
+</p>
+<p><a name="8"></a><i><font color="#3333ff"><font size="+1">(3) Sky
+(Cloud)
+Cover Probability</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sky or cloud
+cover
+is divided into 4 categories, clear, scattered, broken, and overcast.
+Each
+category has a</font>
+<br>
+<font size="+1">range of cloud amount in fractions or percentages, as
+listed below:</font>
+<table border="1" cols="5" nosave="" style="width: 678px; height: 85px;">
+  <caption>&nbsp;</caption> <tbody>
+    <tr>
+      <td>
+      <center><font size="+1">Cloud Cover</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Clear</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Scattered</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;Broken</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Overcast</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Cloud amount&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">0/8</font></center>
+      </td>
+      <td>
+      <center><font size="+1">1/8 - 4/8</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;5/8-7/8</font></center>
+      </td>
+      <td>
+      <center><font size="+1">&nbsp;8/8</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">Cloud cover %&nbsp;</font></center>
+      </td>
+      <td>
+      <center><font size="+1">0</font></center>
+      </td>
+      <td>
+      <center><font size="+1">1-50</font></center>
+      </td>
+      <td>
+      <center><font size="+1">51-100</font></center>
+      </td>
+      <td>
+      <center><font size="+1">100</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eta and RSM models
+treat
+cloud cover as a percentage instead of a category or
+fraction.&nbsp;&nbsp;
+SREF-aviation</font>
+<br>
+<font size="+1">products use the seamless range of percentages shown
+in theabove table. So the probability of a particular cloud</font>
+<br>
+<font size="+1">cover category is the percentage of ensemble members
+predicting a cloud cover percentage&nbsp; that falls in the</font>
+<br>
+<font size="+1">category.&nbsp; For example, when the probability of
+a clear sky at one gridpoint is 50%, that means half the ensemble</font>
+<br>
+<font size="+1">members predict clear (0% cloud cover) at that
+gridpoint.</font>
+</p>
+<p><a name="9"></a><i><font color="#3333ff"><font size="+1">(4)Flight
+Restriction
+(LIFR, IFR, MVFR, VFR) probability</font></font></i>
+</p>
+<p><font size="+1">LIFR:&nbsp;&nbsp;&nbsp;&nbsp; Low Instrument Flight
+Rules</font>
+<br>
+<font size="+1">IFR:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Instrument
+Flight
+Rules</font>
+<br>
+<font size="+1">MVFR:&nbsp; Marginal Visual Flight Rules</font>
+<br>
+<font size="+1">VFR:&nbsp;&nbsp;&nbsp;&nbsp; Visual Flight Rules</font>
+</p>
+<p><font size="+1">Restriction categories are defined by cloud base
+height
+(ceiling),&nbsp; surface visibility and cloud amount category, as</font>
+<br>
+<font size="+1">shown below:</font>
+<table border="1" cols="6" nosave=""
+ style="width: 664px; height: 129px;">
+  <caption>&nbsp;</caption> <tbody>
+    <tr nosave="">
+      <td>
+      <center><font size="+1">Category</font></center>
+      </td>
+      <td width="20%" nosave="">
+      <center><font size="+1">Ceiling (ft)</font></center>
+      </td>
+      <td><font size="+1">&nbsp;</font></td>
+      <td>
+      <center><font size="+1">Visibility(mile)</font></center>
+      </td>
+      <td><font size="+1">&nbsp;</font></td>
+      <td width="30%" nosave="">
+      <center><font size="+1">Cloud Category</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">LIFR</font></center>
+      </td>
+      <td>
+      <center><font size="+1">less than 500</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and/or</font></center>
+      </td>
+      <td>
+      <center><font size="+1">less than 1</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Broken or Overcast</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">IFR</font></center>
+      </td>
+      <td>
+      <center><font size="+1">500 to 1000</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and/or</font></center>
+      </td>
+      <td>
+      <center><font size="+1">1 to 3</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Broken or Overcast</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">MVFR</font></center>
+      </td>
+      <td>
+      <center><font size="+1">1000 to 3000</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and/or</font></center>
+      </td>
+      <td>
+      <center><font size="+1">3 to 5</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Broken or Overcast</font></center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <center><font size="+1">VFR</font></center>
+      </td>
+      <td>
+      <center><font size="+1">more than 3000</font></center>
+      </td>
+      <td>
+      <center><font size="+1">and</font></center>
+      </td>
+      <td>
+      <center><font size="+1">more than 5</font></center>
+      </td>
+      <td>
+      <center><font size="+1">or</font></center>
+      </td>
+      <td>
+      <center><font size="+1">Clear or Scattered</font></center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><font size="+1">Here is the pseudo code that describes the
+computation:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; <i>For all members N, find how
+many
+cloud amounts are broken and overcast, say M.</i></font>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If M=0</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+VFR probability = N/N=100 %, i.e. no broken and overcast clouds</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp; Else</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(N-M) members belong to VFR,&nbsp; some of M belong to either LIFR, or
+IFR, or MVFR, or VFR,</font></i>
+</p>
+<p><i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Do the following:</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Within M, find how many members L1 with cloud base &lt;500 ft or Visb
+&lt;1
+mile,</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LIFR probability = L1/N</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Within M, find how many members L2 with 500&lt;=cloudbase&lt;1000 ft or
+1&lt;=Visb&lt;3 mile,</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IFR probability = L2/N</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Within M, find how many members L3 with 1000&lt;=cloudbase&lt;3000 ft
+or
+3&lt;=Visb&lt;5 mile,</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MVFR probability = L3/N</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Then the Left in M, i.e. M-L1-L2-L3 members are belong to VFR,</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+VFR probability = [(M-L1-L2-L3) + (N-M)] / N = (N-L1-L2-L3) / N</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Done</font></i>
+<br>
+<i><font size="+1">&nbsp;&nbsp;&nbsp; End if</font></i>
+</p>
+<p><font size="+1">&nbsp; Note that in the computation, "AND/OR" means
+either
+"AND" or "OR".&nbsp; When using "AND" the evaluation is</font>
+<br>
+<font size="+1">more conservative. We use "OR" in our product.</font>
+</p>
+<p><font size="+1">&nbsp; Ceiling and visibility are also computed and
+listed
+for reference. (See sections 9 &amp; 10).</font>
+</p>
+<p><a name="10"></a><i><font color="#3333ff"><font size="+1">(5) Jet
+Stream
+probability</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Jet stream probability is computed at 3
+levels:
+4,500 ft, 18,000 ft and 34,000 ft with 3 wind speed thresholds at</font>
+<br>
+<font size="+1">each level.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At 4,500 ft, the
+thresholds
+are 20, 40, 60 knots</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At 18,000 and 34,000 ft
+the thresholds are 60, 80, 100 knots</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g., at 18,000 ft
+and
+a threshold of 80 knots, the image will show the probability of wind</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed &gt; 80 knots at
+18,000
+ft.</font>
+</p>
+<p><a name="11"></a><i><font color="#3333ff"><font size="+1">(6)Tropopause</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (I)
+Tropopause
+height: mean and spread in feet</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (II) Temperature
+at tropopause height level: mean&nbsp; and spread in C</font>
+</p>
+<p><a name="12"></a><i><font color="#3333ff"><font size="+1">(7)Frozen-level
+height</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp; The first height above the ground where
+air
+temperature is below 0 C: mean and height spread.</font>
+</p>
+<p><a name="13"></a><i><font color="#3333ff"><font size="+1">(8)Total
+Cloud
+cover</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (I)&nbsp; Mean and
+Spread:&nbsp;
+averaged cloud total amount (%) and spread (%).</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+example: cloud contour = 80 and shade color is yellow, which indicates
+that the average&nbsp; cloud&nbsp; amount is</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+80%,&nbsp; and standard deviation (diversity among members) is 20 %</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (II) Max cloud
+amount:&nbsp;
+maximum cloud amount from all ensemble members.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp; (III) Min cloud
+amount:&nbsp;
+minimum cloud amount from all ensemble members.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+example:&nbsp; Min cloud amount at a region = 60%, which indicates the
+ensemble mean&nbsp; cloud&nbsp; coverage for</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+this region is <b>AT LEAST</b>&nbsp; 60 %.</font>
+</p>
+<p><a name="14"></a><i><font color="#3333ff"><font size="+1">(9)Visibility</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defined
+as
+the horizontal visibility at the surface. Visibility is not a model
+variable
+but is computed from post</font>
+<br>
+<font size="+1">processing output, based on surface humidity, rain,
+etc.
+Two notes:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (a) Eta and RSM do
+not
+consider the haze directly, but haze forms in high humidity. Thus
+SREFvisibilities</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+implicitly include low visibility caused by haze.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b) Dust storms
+cannot
+be detected in the Eta or RSM.</font>
+<br>
+&nbsp;
+</p>
+<p><a name="15"></a><font size="+1">(<i><font color="#3333ff">10)Ceiling</font></i></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conditional
+ceiling,
+defined as the height of the lowest layer of cloud when the sky cover
+is
+broken or</font>
+<br>
+<font size="+1">overcast;&nbsp; the mean and spread are computed in
+feet.&nbsp;
+If no cloud or sky cover is less 50%, then there is no</font>
+<br>
+<font size="+1">ceiling, then its value is defined as model default
+14200
+m or 46580 feet. The model cloud is defined at each</font>
+<br>
+<font size="+1">grid point and level&nbsp; and is not continuously
+distributed
+in the vertical.&nbsp; The cloud base height is computed</font>
+<br>
+<font size="+1">from the lowest level of&nbsp; cloud at each gridpoint
+in each ensemble member. But after averaging all the</font>
+<br>
+<font size="+1">ensemble members, the cloud&nbsp; base may no longer
+correspond exactly to any of the model levels.</font>
+</p>
+<p><a name="16"></a><i><font color="#3333ff"><font size="+1">(11)Cloud
+top</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The height of the
+highest
+layer of cloud; but currently not available from the ensemblemodels.</font>
+</p>
+<p><a name="17"></a><font size="+1">(<i><font color="#3333ff">12)Convection</font></i></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convection in
+the
+SREF is measured by the model convective cloud amount.&nbsp; Convective
+cloud is created each</font>
+<br>
+<font size="+1">ensemble member from its convective scheme (BMJ, KF,
+or SAS).&nbsp; This definition is not the standard used in</font>
+<br>
+<font size="+1">aviation, where convection is defined as the mass
+convergence
+ordivergence.&nbsp; In the SREF product, the location of</font>
+<br>
+<font size="+1">convection is expressed in terms of convective
+cloudamount
+mean and spread.</font>
+</p>
+<p><a name="18"></a><i><font color="#3333ff"><font size="+1">(13)Convection
+Speed and direction</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; Defined as convective storm's
+velocity
+field.&nbsp; Mean (contour), spread (filled) and vector flow
+(direction)
+are</font>
+<br>
+<font size="+1">plotted in one picture.</font>
+</p>
+<p><a name="19"></a><font size="+1">(<i><font color="#3333ff">14)Low
+level
+wind shear (LLWS)</font></i></font>
+</p>
+<p><font size="+1">&nbsp; &nbsp; &nbsp; &nbsp; LLWS here is defined by
+the vector change in the layer between the surface and 2000 feet level.
+Since winds are<br>
+defined at fixed pressure levels with 25mb intervals, the winds at
+different location may be at different pressure levels.<br>
+Furthermore, 2000feet level will not just at a pressure level.
+Therefore, to compute the LLWS, we must first find the<br>
+2000 feet level at each grid, then using 10m wind and the 2000 feet
+wind to get the wind change. <br>
+</font></p>
+<p><font size="+1"><img src="llws_comp.png" alt=""
+ style="height: 879px; width: 722px;"><br>
+</font></p>
+<p><font size="+1">&nbsp; First serch 2000 feet + 10m height (ie 2030
+feet)&nbsp; from the surface upward level by level, after find it, say
+between level-5 and level-6, <br>
+then compute the U and V components of the wind at this level by linear
+interpolation of level-5 wind and level-6 wind.<br>
+&nbsp; Second step is computing the wind vector change over 10m and
+2030 feet. The LLWS is defined as<br>
+</font></p>
+<p><font size="+1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span
+ style="font-style: italic;">LLWS = SQRT [ (U</span><sub
+ style="font-style: italic;">2030</sub><span style="font-style: italic;">
+- U</span><sub style="font-style: italic;">10</sub><span
+ style="font-style: italic;">)</span><sup style="font-style: italic;">2</sup><span
+ style="font-style: italic;"> + (V</span><sub
+ style="font-style: italic;">2000</sub><span style="font-style: italic;">
+- V</span><sub style="font-style: italic;">10</sub><span
+ style="font-style: italic;">)</span><sup style="font-style: italic;">2</sup><span
+ style="font-style: italic;"> ]</span><br>
+</font></p>
+<p><font size="+1">&nbsp;&nbsp; Where 2030 means 2030 feet, 10 means 10
+meter.<br>
+</font></p>
+<p><font size="+1">The LLWS mean and spread thus can be obtained from
+15 ensemble members.<br>
+</font></p>
+<p><font size="+1">&nbsp; &nbsp; The severe LLWS is defined by (1) LLWS
+&gt; 20 knotes over 2000 feet, or<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(2) LLWS &gt; 0.16 over any 200 feet layer withn the 2000 feet</font></p>
+<p><font size="+1">&nbsp; The probability of severe LLWS is also
+computed, but please note that, the pressure level intervals are</font></p>
+<p><font size="+1">fixed 25 mb, or 600 feet, much larger than 200 feet,
+so, in current case, only case(1) is the threshold for severe LLWS here.<br>
+<br>
+</font></p>
+<p><a name="20"></a><i><font color="#3333ff"><font size="+1">(15)Precipitation
+type</font></font></i>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Probabilities of three kinds of precipitation are defined: rain, snow
+and freezing rain are calculated. &nbsp;</font>
+</p>
+<p><a name="25"></a><i><font color="#3333ff"><font size="+1">(16)Surface
+wind speed and direction at 10 m</font></font></i>
+</p>
+<p><font size="+1">&nbsp; &nbsp; &nbsp; &nbsp; The mean of surface wind
+speed is computed from average&nbsp; of total wind speeds Wi <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">Wi =&nbsp; SQRT(Ui</span><sup
+ style="font-style: italic;">2</sup><span style="font-style: italic;">+Vi</span><sup
+ style="font-style: italic;">2</sup><span style="font-style: italic;">)</span><samp
+ style="font-style: italic;"></samp><span style="font-style: italic;">&nbsp;</span>
+&nbsp; <br>
+</font></p>
+<p><font size="+1">&nbsp; &nbsp; &nbsp; The products include
+:</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Wind speed mean, spread (wind direction is also depicted in the same
+image)</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The probability for wind speed exceeding 10 knotes</font> <br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The probability for wind speed exceeding 20 knotes</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The probability for wind speed exceeding 30 knotes</font> <br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The calculations of the mean
+and spread of wind direction(North is reference) are a little bit
+complex. First, compute <br>
+the mean and spread of U and V components respectively, then the mean
+and spread of wind direction can be expressed as:<br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-style: italic;">mean of wind direction = arctg ( Umean /
+Vmean)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-style: italic;">spread of wind direction = arctg (Wspread
+/Wmean)</span><br>
+</p>
+<p>&nbsp;where <span style="font-style: italic;"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Wspread = SQRT ( Uspread</span><sup style="font-style: italic;">2</sup><span
+ style="font-style: italic;"> + Vspread</span><sup
+ style="font-style: italic;">2</sup><span style="font-style: italic;">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-style: italic;">Wmean =&nbsp; SQRT ( Umean</span><sup
+ style="font-style: italic;">2</sup><span style="font-style: italic;">
++ Vmean</span><sup style="font-style: italic;">2</sup><span
+ style="font-style: italic;">)</span><br>
+</p>
+<p><font size="+1">&nbsp; &nbsp; &nbsp; &nbsp;</font> <img
+ src="Fig.1.png" alt="" style="width: 341px; height: 275px;"><br>
+<a name="21"></a><font color="#3333ff"><font size="+1">7. Verification</font></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Currently, low level wind shear product has been verified, and showing
+that, the skill decreases with the <br>
+forecast time, but it i sstillful uptime 63 hours. Please see here fore
+detail.</font></p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The verification of other SREF aviation products has not yet been
+performed because
+observed data, either service</font>
+<br>
+<font size="+1">or pilot reports, are not available to NCEP. We are
+planning
+to work with AWC and Aviation Service Branch to do</font>
+<br>
+<font size="+1">this work.&nbsp; We will also cooperate with FSL using
+its <a href="http://www-ad.fsl.noaa.gov/fvb/rtvs/">RTVS</a> (Real Time
+Verification System) to verify some SREF</font>
+<br>
+<font size="+1">aviation products.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Before verification
+work
+can be done, probabilistic forecastvariables (mean, spread, and
+probability)
+must be</font>
+<br>
+<font size="+1">converted from the NCEP GRIB-extension format into a
+regular data format such asGRIB and BUFR.&nbsp; Until that</font>
+<br>
+<font size="+1">happens, there is no simple way to store the ensemble
+data in a standard, easy to use format.&nbsp; AWC, RTVS,</font>
+<br>
+<font size="+1">Aviation Service Branch and EMC are working togetherto
+solve this problem.&nbsp;</font>
+</p>
+<p><a name="22"></a><font color="#3333ff"><font size="+1">8.&nbsp;
+Plans
+for the Near-Future</font></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The
+SREF-aviation
+system has been initiated and has been making good progress.&nbsp; But
+it is still in the deve-</font>
+<br>
+<font size="+1">lopment phase.&nbsp; It will be updated along with the
+SREF system.&nbsp; Here are some upcoming improvements to the</font>
+<br>
+<font size="+1">SREF system:</font>
+</p>
+<p><font size="+1">(1) Add Alaska domain.</font>
+</p>
+<p><font size="+1">(2) Update ensemble members to include more,
+different
+physics schemes. Currently,&nbsp; breeding pertubations for</font>
+<br>
+<font size="+1">initial conditions is the main method used to
+differentiate
+between the ensemble members.&nbsp; An ensemble with</font>
+<br>
+<font size="+1">many different physics schemes and pertubations&nbsp;
+will create further diversity among the different&nbsp; members, and a</font>
+<br>
+<font size="+1">larger spread in results. Our study already showed
+better
+skill than with a breeding-only ensemble.</font>
+</p>
+<p><font size="+1">(3) Increase Eta and RSM resolution from the current
+operational
+48 km to 32 km.</font>
+</p>
+<p><a name="23"></a><font color="#3333ff"><font size="+1">9. Existing
+issues</font></font>
+</p>
+<p><font size="+1">(1) Ensemble members</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; There are several possible
+techniques
+to create different ensemble members, with the goal of creating the most</font>
+<br>
+<font size="+1">diversity among the ensemble members. We are still
+experimenting
+with different&nbsp; techniques to see which will</font>
+<br>
+<font size="+1">result in the highest skill.</font>
+</p>
+<p><font size="+1">(2) Variables and Algorithms</font>
+</p>
+<p><font size="+1">&nbsp;(i) Icing is currently calculated using the
+simplest
+T-Rh algorithm. We will switch to a more complex one if the</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; basic data is available
+and computing resources permit.&nbsp; Our goal is not to investigate
+which
+algorithm is best,</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; but to try instead to
+use the ensemble technique for aviation.</font>
+</p>
+<p><font size="+1">&nbsp; (ii)&nbsp; Ellrod turbulence also is
+relatively
+simple algorithm, which may be a candidate for replacement.</font>
+</p>
+<p><font size="+1">&nbsp; (iii) SREF aviation products are created from
+regular
+forecast variables, which aren't always the same as those</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+used in aviation.&nbsp; For example, in aviation convection is defined
+differently than in the usual&nbsp; meteorological</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sense.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; (iv) Convection speed and direction are
+also
+an issue.&nbsp; In SREF, convection speed and direction are computed</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+from storm U-V fields. They might not match the actual convection speed
+and direction.</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp; (v)&nbsp; Vertical wind shear is
+on
+pressure levels of 1000, 950, 900 mb. For mountain regions like the
+Rocky
+Mountain</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+states, we can't compute wind shear on pressure surfaces that intersect
+or are below the surface.</font>
+</p>
+<p><font size="+1">(3)Verification</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How
+to
+perform verification on SREF aviation products is most important
+unsolved&nbsp;
+problem.&nbsp; The current</font>
+<br>
+<font size="+1">difficulty is output files in NCEP's GRIB format
+extension,
+not the standard GRIB format.&nbsp; RTVS and AWC can't</font>
+<br>
+<font size="+1">read the NCEP format extension &amp; can't help with
+verification.&nbsp; We are working on this issue. Storing probabilistic</font>
+<br>
+<font size="+1">data in&nbsp; the BUFR format is also a problem.</font>
+</p>
+<p><font size="+1">(4) Ensemble domain restricted to CONUS; Alaska
+domain
+must be added.</font>
+</p>
+<p><font size="+1">(5) Probabilistic data format</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SREF
+aviation
+products are grid-based and not available for specific cities or
+airports,
+since the single station</font>
+<br>
+<font size="+1">post-processing uses BUFR files (not currently output
+by SREF). If some users want specific stations, please</font>
+<br>
+<font size="+1">contact us. We can do it for you separately.</font>
+</p>
+<p><font size="+1">(6) 90-minute update time may be too slow to meet
+the
+requirement of aviation users.</font>
+</p>
+<p><font size="+1">(7) Machine production problems</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Because SREF-aviation products are still in the testing phase they are
+not NCEP "official" products.&nbsp; By</font>
+<br>
+<font size="+1">NCEP policy, the products must run on the NCEP
+development
+machine&nbsp; instead of the production machine.</font>
+<br>
+<font size="+1">Since the recent upgrade, the development machine is
+often unstable goes down from time to time.&nbsp; When that</font>
+<br>
+<font size="+1">happens, the SREF cron jobs will be re-run manually,
+which will delay product delivery.</font>
+</p>
+<p><a name="24"></a><font color="#3333ff"
+ style="color: rgb(51, 51, 255);"><font size="+1">10. Comments and
+Feedback</font></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We welcome any
+comments,
+suggestions and feedback from users.&nbsp; If users have new requests,
+we will satisfy</font>
+<br>
+<font size="+1">them if we can.<br>
+</font></p>
+<p><font size="+1"><br>
+<a name="26"></a><span style="color: rgb(51, 51, 255);">11. References</span><br>
+</font></p>
+<p><font size="+1">1.&nbsp; <a
+ href="AMS_aviation_conf_2004_by_Binbin.Zhou.pdf">Binbin Zhou, et al,
+2004:&nbsp; An introduction to NCEP Aviation Project, AMS 11th
+Conference on&nbsp; Aviation,<br>
+&nbsp;Range and Areospace, Oct 4-8, Hyannis, MA, Amer Meteor. Soc.,</a><br>
+</font></p>
+<p><font size="+1">2. Federal Meteorological handbook, No. 1 (FMH-1),
+1995<br>
+</font></p>
+<p><font size="+1">3. NWS Instruction 10-813 of TAF, 2004<br>
+</font></p>
+4. <a href="http://wwwt.emc.ncep.noaa.gov/mmb/SREF/srefupdate_2004.pdf">Du,
+J. et al, 2004: The NOAA/NWS/NCEP short-range <br>
+ensemble forecast (SREF) system: evaluation of an initial condition vs <br>
+multi-model physics ensemble approach. Preprints, 16th Conference on <br>
+Numerical Weather Prediction, Seattle, Washington, Amer. Meteor. Soc.,</a>
+<p><font size="+1"><big style="color: rgb(0, 0, 153);"><span
+ style="font-style: italic;">Acknoledgement</span></big><br>
+</font></p>
+<p><font size="+1">Following persons are thanked for their technical
+support,
+discussions and valuable comments .</font>
+</p>
+<p><font size="+1">Fred Mosher, AWC/NCEP?NOAA</font>
+<br>
+<font size="+1">Steven Silberberg, AWC/NCEP/NOAA</font>
+<br>
+<font size="+1">Mark Andrews,&nbsp; Aviation Service Branch, NWS//NOAA</font>
+<br>
+<font size="+1">Michael Graf, Aviation Service Branch, NWS/NOAA</font>
+<br>
+<font size="+1">Jennifer Mahoney, FSL/NOAA</font>
+<br>
+<font size="+1">Kevin Baker,&nbsp; ?/NOAA</font>
+<br>
+<font size="+1">Kelvin L JohnStone,&nbsp; NWS/NOAA</font>
+</p>
+<p><font size="+1">Also thanks to Mary Hart for her review and editing
+this
+document</font>
+</p>
+<p><font size="+1">Contact information:</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; Binbin Zhou</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; EMC/NCEP/NOAA</font>
+<br>
+<font size="+1">&nbsp;&nbsp; Binbin.Zhou@noaa.gov</font>
+<br>
+<font size="+1">&nbsp;&nbsp; Call (301)763-8000x7255</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp; or</font>
+</p>
+<p><font size="+1">&nbsp; Jeff McQeen</font>
+<br>
+<font size="+1">&nbsp; EMC/NCEP/NOAA</font>
+<br>
+<font size="+1">&nbsp; Jeff.McQueen@noaa.gov</font>
+<br>
+<font size="+1">&nbsp; Call (301)763-8000x7226</font>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+</body>
+</html>

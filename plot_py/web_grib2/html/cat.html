@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title> NCEP Short Range Ensemble Forecast System (SREF), Aviation Products, NOAA/NWS/NCEP/EMC </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../js/style.css"></link>
+<script language="JavaScript" src="../js/SREF.js"> </script>
+<script language="JavaScript">
+<!--
+                                                                                                                                  
+//-->
+                                                                                                                                  
+</script>
+</head>
+                                                                                                                                  
+<body  border=0 bgcolor="DDDDDD"  text="000000" background="../js/dirbkgnd.gif"  onLoad="javascript:load_image(document.form1)" >
+                                                                                                                                  
+<img src="../js/noaa_logo.gif" height=60 width=65> 
+<font color="Blue" size=+3> &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp   NCEP SREF-Aviation Weather Forecast </font> <font color="red" size=+2> </font> 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+<img src="../js/nws_logo.gif" height=60 width=65> 
+<img src="../js/ncep_80.gif" height=55 width=75>  
+<br>
+                                                                                                                                  
+<table bgcolor="BBBBBB" frame="below" >                                                                                                                 
+<form name='form1'>
+
+<tr>
+
+<td>&nbsp Region
+<select name="reg" onchange="load_image(this.form); location='../html_'+this.form.reg.options[this.form.reg.selectedIndex].value+'/fltrestr.html' ">
+<option value="212" selected > CONUS
+<option value="216" > Alaska
+<option value="243" > Hawaii
+</select>
+</td>
+
+<td>Sub-regions
+<select name="sub" onchange="load_image(this.form)">
+<option value=us selected > Entire <option value=ne > N.East <option value=se > S. East <option value=mw > Mid-West <option value=ms > South <option value=nw > N. West <option value=sw > S. West
+</select>
+</td>
+
+
+<td>Date
+<select name="dy" onchange="load_image(this.form)">
+<option value="20221118" selected>20221118  
+</select>
+</td>
+
+<td>Cycle
+<select name="cyc" onchange="load_image(this.form)">
+  <option value=09 selected > 09Z  <option value=03 > 03Z
+</select>
+</td>
+
+<td>Product
+<select name="type" onchange='location=this.form.type.options[this.form.type.selectedIndex].value'>
+<option value="fltrestr.html" > Flight Restriction
+<option value="ceiling.html" > Ceiling
+<option value="visib.html" > Visibility
+<option value="cloud.html" > Cloud
+<option value="fog.html" > Fog
+<option value="icing.html" > Icing
+<option value="cat.html" selected > Turbulence
+<option value="llws.html" > Low level wind shear
+<option value="refl.html" > Reflectivity 
+<option value="etop.html" > Echo-top  
+<option value="prcp.html" > Precip type
+</select>
+</td>
+     
+
+<td>Threshold  
+<select name="prod" onchange="load_image(this.form)">
+ <option value=prb_3cat8.FL390 > Prob: severe FL390 <option value=prb_3cat8.FL360 > Prob: severe FL360 <option value=prb_3cat8.FL330 > Prob: severe FL330 <option value=prb_3cat8.FL300 > Prob: severe FL300 <option value=prb_3cat8.FL270 > Prob: severe FL270 <option value=prb_3cat8.FL240 > Prob: severe FL240 <option value=prb_3cat8.FL210 > Prob: severe FL210 <option value=prb_3cat8.FL180 > Prob: severe FL180  <option value=prb_2cat8.FL390 > Prob: moderate FL390 <option value=prb_2cat8.FL360 > Prob: moderate FL360 <option value=prb_2cat8.FL330 > Prob: moderate FL330 <option value=prb_2cat8.FL300 > Prob: moderate FL300 <option value=prb_2cat8.FL270 > Prob: moderate FL270 <option value=prb_2cat8.FL240 > Prob: moderate FL240 <option value=prb_2cat8.FL210 > Prob: moderate FL210 <option value=prb_2cat8.FL180 > Prob: moderate FL180  <option value=prb_1cat8.FL390 > Prob: light FL390 <option value=prb_1cat8.FL360 > Prob: light FL360 <option value=prb_1cat8.FL330 > Prob: light FL330 <option value=prb_1cat8.FL300 > Prob: light FL300 <option value=prb_1cat8.FL270 > Prob: light FL270 <option value=prb_1cat8.FL240 > Prob: light FL240 <option value=prb_1cat8.FL210 > Prob: light FL210 <option value=prb_1cat8.FL180 > Prob: light FL180 
+</select>
+</td>
+
+</tr>
+</form>
+
+<form name='form2'>
+<tr>
+<td colspan=6 bgcolor="#DDDDDD">
+&nbsp &nbsp &nbsp Select speed:
+<select name="spd">
+ <option selected>normal
+ <option>fast
+ <option>slow
+</select>
+&nbsp
+ Animation toggle <input  type="checkbox" name="timerBox"  onClick="javascript:get_speed(this.form);javascript:get_i();javascript:animation()">
+&nbsp &nbsp &nbsp 
+ <input  type="button" name="fst" value="|<" onClick="javascript:rewind()">
+ <input  type="button" name="prv" value="<" onClick="javascript:prev()">
+ <input  type="button" name="nxt" value=">" onClick="javascript:next()">
+ <input  type="button" name="lst" value=">|" onClick="javascript:last()">
+&nbsp &nbsp &nbsp <a href=mailto:Binbin.Zhou@noaa.gov>Email comments</a> 
+&nbsp &nbsp &nbsp <a href="http://www.emc.ncep.noaa.gov/mmb/SREF/SREF.html">SREF Home </a>
+&nbsp &nbsp &nbsp <a href="javascript:myWin()"> Document </a>
+</td>
+</tr>
+
+<tr>
+<td colspan=6>
+     <img src="" name="my_image" width=1100 height=850>
+</td>
+</tr>
+
+<tr>
+<td colspan=6>
+   <IMG SRC="https://www.emc.ncep.noaa.gov/emc/pages/disclaimer/disclaimer_small.png" width=1100 height=80>
+</td>
+</tr>
+
+</form>
+</table>
+
+
+
+</body>
+</html>
+
